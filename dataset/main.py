@@ -6,8 +6,8 @@ import numpy as np
 
 def main():
 
-    for i, file in enumerate(glob.glob('original/*')):
-        img = cv2.imread(file)
+    for i, file in enumerate(sorted(glob.glob('original/*'))):
+        img = cv2.imread(file)[:, :, ::-1]
         h, w, d = img.shape
         # print(h, w, d)
         size = max(h, w)

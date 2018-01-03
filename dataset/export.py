@@ -11,7 +11,8 @@ def main():
     image_list = []
     edge_list = []
 
-    for i, file in enumerate(glob.glob('selected/*')):
+    for i, file in enumerate(sorted(glob.glob('selected/*'))):
+        print(file)
         base = os.path.basename(file)
         image_file = 'processed/' + base
         image = cv2.imread(image_file)

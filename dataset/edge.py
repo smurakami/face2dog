@@ -6,7 +6,7 @@ import numpy as np
 
 def main():
 
-    for i, file in enumerate(glob.glob('processed/*')):
+    for i, file in enumerate(sorted(glob.glob('processed/*'))):
         img = cv2.imread(file)
 
 
